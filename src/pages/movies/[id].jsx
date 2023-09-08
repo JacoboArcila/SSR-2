@@ -1,6 +1,5 @@
 import React from "react";
 import {
-	Sugestions,
 	PosterContainer,
 	LogoRates,
 	DescriptioContainer,
@@ -12,15 +11,13 @@ import {
 	Info,
 	Contenedor,
 	Puntuaciones,
-	CloseButton,
-	VideoModal,
 } from "@styles/pages.styles/movies.styles";
 import Image from "next/image";
 import Link from "next/link";
 import { getMovie } from "@/service/movie";
 
-function MovieDetail({ movies, cardMovies }) {
-	console.log(movies)
+function MovieDetail({ movies }) {
+	console.log(movies);
 	return (
 		<main>
 			<Link href="/">Atras</Link>
@@ -96,7 +93,7 @@ function MovieDetail({ movies, cardMovies }) {
 
 export async function getServerSideProps(contexto) {
 	const { id } = contexto.params;
-    const movies = await getMovie(id);
+	const movies = await getMovie(id);
 	return {
 		props: {
 			movies,
