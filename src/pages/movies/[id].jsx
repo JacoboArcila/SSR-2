@@ -66,7 +66,7 @@ function MovieDetail({ movies }) {
 				};
 				const response = await axios.post(endpoint, postData);
 				setRating(newRating);
-				if(response.data === "Vote added") {
+				if (response.data === "Vote added") {
 					toast.success("Película agregada a la lista");
 				} else {
 					toast.success("Su voto ha sido modificado con éxito");
