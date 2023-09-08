@@ -13,7 +13,6 @@ import {
 	Puntuaciones,
 } from "@styles/pages.styles/movies.styles";
 import Image from "next/image";
-import Link from "next/link";
 import { getMovie } from "@/service/movie";
 
 function MovieDetail({ movies }) {
