@@ -1,5 +1,6 @@
 import React from "react";
 import {
+	Sugestions,
 	PosterContainer,
 	LogoRates,
 	DescriptioContainer,
@@ -11,10 +12,12 @@ import {
 	Info,
 	Contenedor,
 	Puntuaciones,
-} from "../../styles/pages.styles/movies.styles";
+	CloseButton,
+	VideoModal,
+} from "@styles/pages.styles/movies.styles";
 import Image from "next/image";
 import Link from "next/link";
-import { getMovie } from "@/services/movie";
+import { getMovie } from "@/service/movie";
 
 function MovieDetail({ movies, cardMovies }) {
 	console.log(movies)
