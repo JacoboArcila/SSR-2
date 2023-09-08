@@ -20,7 +20,6 @@ function MovieDetail({ movies }) {
 	console.log(movies);
 	return (
 		<main>
-			<Link href="/">Atras</Link>
 			<Purple></Purple>
 			<Contenedor>
 				<ContainerInfoMovie>
