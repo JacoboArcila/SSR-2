@@ -25,6 +25,7 @@ import { FaStar } from "react-icons/fa";
 import Cookies from "js-cookie";
 import axios from "axios";
 import { Toaster, toast } from "sonner";
+import { getMovie } from "@/service/movie";
 
 const InactiveStarRating = () => {
 	const stars = [];
@@ -63,15 +64,12 @@ function MovieDetail({ movies }) {
 					movieId: movies?.movieId,
 					rating: newRating,
 				};
-
 				const response = await axios.post(endpoint, postData);
-
 				setRating(newRating);
-
 				if(response.data === "Vote added") {
-					toast.success(`Película agregada a la lista`);
+					toast.success("Película agregada a la lista");
 				} else {
-					toast.success(`Su voto ha sido modificado con éxito`);
+					toast.success("Su voto ha sido modificado con éxito");
 				}
 			} catch (error) {
 				console.error("Error en la solicitud POST:", error);
